@@ -173,3 +173,17 @@ Direction         Min         Max         Avg          Jitter     Loss
                                                     Jitter Algorithm [RFC1889]
 ===============================================================================
 ```
+## Example Use from an Extreme Networks Summit Series Switch.
+X440-G2.1 #  load script twampy_exos.py sender 10.5.5.2:1025  10.5.5.1:1025 -c 100
+setting socket options for Default-VR
+
+setting via /proc/self/ns_id
+===============================================================================
+Direction         Min         Max         Avg          Jitter     Loss
+-------------------------------------------------------------------------------
+Outbound:        6.11ms      7.91ms      6.46ms       140us    300.0 pkts
+Inbound:            0us         0us         0us         0us    300.0 pkts
+Roundtrip:        913us      3.22ms      1.45ms       197us      0.0 pkts   0.0%
+-------------------------------------------------------------------------------
+                                                    Jitter Algorithm [RFC1889]
+===============================================================================
